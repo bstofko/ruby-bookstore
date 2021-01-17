@@ -1,0 +1,14 @@
+
+<div class="container">
+
+  <div class="jumbotron">
+    <h1 class="display-4"><%= @author.first_name %></h1>
+
+    <h1 class="display-4"><%= @author.last_name %></h1>
+    <hr class="my-4">
+    
+    <%= link_to 'Edit', edit_author_path(@author), class:"btn btn-secondary" %> |
+    <%= link_to 'Back', authors_path, class:"btn btn-secondary btn-dark" %>
+  </div>
+
+</div>

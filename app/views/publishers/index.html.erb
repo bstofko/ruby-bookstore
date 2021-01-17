@@ -1,0 +1,25 @@
+<div class="container">
+  <table class="table table-striped table-bordered table-hover">
+    <thead class="thead-dark">
+      <tr>
+        <th>Name</th>
+        <th>ID</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @publishers.each do |publisher| %>
+        <tr>
+          <td><%= publisher.name %></td>
+          <td><%= publisher.id %></td>
+          <td><%= link_to 'Show', publisher %></td>
+          <td><%= link_to 'Edit', edit_publisher_path(publisher) %></td>
+          <td><%= link_to 'Destroy', publisher, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <br>
+  <%= link_to 'New Publisher', new_publisher_path, class:'btn btn-secondary' %>
+</div>
