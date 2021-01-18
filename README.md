@@ -12,3 +12,19 @@ In progress:
 - Add instance methods to Book.rb
 - Search and retrieve collections of book formats and types
 
+Screenshots:
+<br/><br/><strong>Index Landing Page (Displays all books by default i.e. @books = all)</strong>
+![alt text](https://i.ibb.co/MPT1jqr/index-page.png)
+
+<br/><br/><strong>Add New Book</strong>
+![alt text](https://i.ibb.co/FBmgMLX/new-book-form.png)
+
+<br/><br/><strong>Authors Page</strong>
+![alt text](https://i.ibb.co/P60X8Zb/authors-page.png)
+
+<br/><br/><strong>Search by Book Title</strong>
+![alt text](https://i.ibb.co/pR0NCgv/search-by-title.png)
+
+<br/><br/><strong>Search by Author Last Name</strong>
+![alt text](https://i.ibb.co/Kjb2BNQ/search-by-author.png)
+
