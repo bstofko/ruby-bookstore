@@ -1,24 +1,8 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Description: This is a Bookstore App written in Ruby on Rails that allows users to view books, authors, and publishers (i.e. Book, Author, and Publisher models). Users can add, update, remove, and view books, authors, and publishers as well as a search bar to query books using keywords (functionality described below).
 
-Things you may want to cover:
+Further search and db migrations in development.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Search:
+- Currently searches for books with titles that closely match the name column of the Book Model Table in the schema.
