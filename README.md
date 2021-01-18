@@ -7,10 +7,11 @@ Search:
   * Titles that closely match the name column of the Book Model Table.
   * Authors that match a non-case sensitive string from the Author Model Table using author_id
   * Publishers that match a non-case sensitive string from the Publisher Model Table using publisher_id
+- Instance methods return the Author Name and Average Rating for an instantiated book
 
 In progress:
-- Add instance methods to Book.rb
 - Search and retrieve collections of book formats and types
+- Add functionality in views for instance methods, etc.
 
 Screenshots:<br/>
 
