@@ -2,7 +2,7 @@ class Book < ApplicationRecord
   belongs_to :author
   has_many :book_reviews
 
-  def self.search(query, title_only=true, book_format_physical:nil, book_format_type_id:nil)
+  def self.search(query, title_only=false, book_format_physical:nil, book_format_type_id:nil)
       
     if query
       if title_only==true 
@@ -38,7 +38,11 @@ class Book < ApplicationRecord
   end
 
   def average_rating
-
+    reviews = BookReview.where(["book_id = ?", id])
+    count = 0.0
+    reviews.each { |x| 
+    count += x.rating.to_f }
+    puts "Average Rating across #{reviews.size} Reviews: " + "#{(count/reviews.size).round(2)}"
   end
 
 end
