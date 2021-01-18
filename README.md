@@ -12,3 +12,6 @@ In progress:
 - Add instance methods to Book.rb
 - Search and retrieve collections of book formats and types
 
+Screenshots:
+Index Landing Page (Displays all books by default i.e. @books = all)
+![alt text](https://i.ibb.co/MPT1jqr/index-page.png)
