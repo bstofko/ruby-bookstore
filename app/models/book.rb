@@ -1,8 +1,9 @@
 class Book < ApplicationRecord
   belongs_to :author
   has_many :book_reviews
+  has_many :book_format_types
 
-  def self.search(query, title_only=false, book_format_physical:nil, book_format_type_id:nil)
+  def self.search(query, title_only=false, book_format_physical=nil, book_format_type_id=nil)
       
     if query
       if title_only==true 
@@ -20,7 +21,6 @@ class Book < ApplicationRecord
         else
           none
         end 
-      #else
       end
       
     else
@@ -42,7 +42,24 @@ class Book < ApplicationRecord
     count = 0.0
     reviews.each { |x| 
     count += x.rating.to_f }
-    puts "Average Rating across #{reviews.size} Reviews: " + "#{(count/reviews.size).round(2)}"
+    puts "Average Rating across #{reviews.size} reviews: " + "#{(count/reviews.size).round(2)}"
+  end
+
+  def book_format_types
+    # This needs to be implemented as some kind of union
+    types = BookFormat.where(["book_id = ?", id])
+    formats = ""
+
+    types.each { |x|
+      # Testing
+      puts x.book_format_type_id
+      formats.push(BookFormatType.where(["id = ?", x.book_format_type_id]))
+    }
+    
+    formats.each { |x|
+      puts x.name
+    }
+    puts "Available in: " + formats
   end
 
 end
